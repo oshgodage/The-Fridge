@@ -1,0 +1,32 @@
+$font-files: (
+  "font1": "OpenSans-Bold.ttf",
+  "font2": "OpenSans-BoldItalic.ttf",
+  "font3": "OpenSans-ExtraBold.ttf",
+  "font4": "OpenSans-Regular.ttf",
+  "font5": "OpenSans-Semibold.ttf",
+);
+
+@each $font-name, $font-filename in $font-files {
+  @font-face {
+    font-family: "#{$font-name}";
+    src: url("../fonts/#{$font-filename}") format("truetype"); 
+  }
+}
+
+
+.custom-font1 {
+  font-family: "font1", sans-serif; 
+}
+.custom-font2 {
+    font-family: "font2", sans-serif; 
+  }
+  .custom-font3 {
+    font-family: "font3", sans-serif; 
+  }
+  .custom-font4 {
+    font-family: "font4", sans-serif; 
+  }
+  .custom-font5 {
+    font-family: "font5", sans-serif; 
+  }
+  
